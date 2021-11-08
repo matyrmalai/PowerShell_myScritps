@@ -1,0 +1,1 @@
+﻿Get-ADUser -Filter * -SearchBase 'OU=Пользователи,OU=Севзапвнипиэнергопром,DC=org,DC=szvep,DC=ru'|ForEach-Object -process {Add-ADGroupMember -identity "Internet-Standard" -Members $_.SamAccountName}
